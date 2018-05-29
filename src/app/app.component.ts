@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Todo} from './todo';
 import {TodoDataService} from './todo-data.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ export class AppComponent {
 
   newTodo: Todo = new Todo();
 
-  constructor(private todoDataService: TodoDataService) {
+  constructor(private todoDataService: TodoDataService,
+              private translate: TranslateService) {
   }
 
   addTodo() {
@@ -30,6 +32,11 @@ export class AppComponent {
 
   get todos() {
     return this.todoDataService.getAllTodos();
+  }
+
+  changeLocale(event) {
+    this.translate.use(event.target.value)
+      .subscribe(() => localStorage.setItem('locale', event.target.value));
   }
 
 }

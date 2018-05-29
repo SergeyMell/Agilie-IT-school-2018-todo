@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="9acc4eba8ab372d7e8f68750b536455a0845f661" datatype="html">
+        <source>Todos</source>
+        <target>Задачи</target>
+      </trans-unit>
+      <trans-unit id="9ceefaef379e7dd3b90769adf78bb62c4b5a994b" datatype="html">
+        <source>What needs to be done?</source>
+        <target>Что должно быть сделано?</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,7 +1,11 @@
 <section class="todoapp">
   <header class="header">
-    <h1>Todos</h1>
-    <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+    <h1 i18n>{{ 'APP.HEADER' | translate }}</h1>
+    <select (change)="changeLocale($event)" [value]="'LOCALE' | translate">
+      <option value="ru">RU</option>
+      <option value="en">EN</option>
+    </select>
+    <input class="new-todo" i18n-placeholder placeholder="{{'APP.PLACEHOLDER' | translate}}" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
   </header>
   <section class="main" *ngIf="todos.length > 0">
     <ul class="todo-list">

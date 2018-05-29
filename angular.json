@@ -44,6 +44,12 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
+            },
+            "ru": {
+              "aot": true,
+              "outputPath": "dist/ru",
+              "i18nFile": "src/locales/messages.ru.xlf",
+              "i18nLocale": "ru"
             }
           }
         },
